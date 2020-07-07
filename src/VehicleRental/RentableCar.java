@@ -4,6 +4,7 @@ public class RentableCar extends Car implements Rental {
     Person person;
     public RentableCar(String name, int yearProduction, int numberOfSeats) {
         super(name, yearProduction, numberOfSeats);
+        person = new Person();
     }
 
     @Override
@@ -11,7 +12,7 @@ public class RentableCar extends Car implements Rental {
         person.setFirstName(firstName);
         person.setLastName(lastName);
         person.setId(id);
-        System.out.println(firstName + lastName + id);
+        System.out.println(firstName + " " + lastName + " " + id);
     }
 
     @Override
@@ -24,9 +25,12 @@ public class RentableCar extends Car implements Rental {
 
     @Override
     public boolean isRent() {
-        if (person.getFirstName() != null)
-        return true;
-        else System.out.println("Samochód znajduje się  wypożyczalni do dyspozycji");
+        if (person.getFirstName() != null) {
+            System.out.println("Samochód został wypożyczony");
+        }
+        else {
+            System.out.println("Samochód znajduje się  wypożyczalni do dyspozycji");
+        }
         return false;
     }
 
