@@ -16,19 +16,10 @@ public class Processor extends ComputerPatternInfo {
         this.cpuClockSpeed = cpuClockSpeed;
     }
 
-    public void overclockCpu (double overclockCpuValue){
-        for (double i = getCpuClockSpeed(), j = getTemperature(); i < overclockCpuValue && j <= getHighestSecureTemperature(); i += 10, j++) {
-            setCpuClockSpeed(i);
-            setTemperature(j);
-            System.out.println(i + " MHz " + j + " °C");
-        }
-        System.out.println("Możesz przyspieszyć taktowanie swojego procesora maksymalnie do następującej prędkości " + getCpuClockSpeed() +  " MHz aby osiągnąć maksymalną bezpieczną temperaturę użytkowania procesora " + getTemperature() + " °C \n oprogramowanie procesora zabezpiecza go przed dalszym podnoszeniem prędkości taktowania, aby nie przekroczyć temperatury " + getHighestSecureTemperature() + " °C");
-    }
-
     @Override
     public String toString() {
-        return "Processor{" +
+        return "Processor{" + super.toString() +
                 "cpuClockSpeed=" + cpuClockSpeed +
-                "} " + super.toString();
+                "} ";
     }
 }

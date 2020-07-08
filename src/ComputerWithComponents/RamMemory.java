@@ -26,20 +26,11 @@ public class RamMemory extends ComputerPatternInfo {
         this.ramClockSpeed = ramClockSpeed;
     }
 
-    public void overclockRamMemory (double overclockRamValue){
-        for (double i = getRamClockSpeed(), j = getTemperature(); i < overclockRamValue && j <= getHighestSecureTemperature(); i += 6.6, j++) {
-            setRamClockSpeed(i);
-            setTemperature(j);
-            System.out.println(i + " MHz " + j + " °C");
-        }
-        System.out.println("Możesz przyspieszyć taktowanie swojej pamięci RAM maksymalnie do następującej prędkości " + getRamClockSpeed() +  " MHz aby osiągnąć maksymalną bezpieczną temperaturę użytkowania pamięci RAM " + getTemperature() + " °C \n oprogramowanie pamięci RAM zabezpiecza ją przed dalszym podnoszeniem prędkości taktowania, aby nie przekroczyć temperatury " + getHighestSecureTemperature() + " °C");
-    }
-
     @Override
     public String toString() {
-        return "RamMemory{" +
+        return "RamMemory{" + super.toString() +
                 "ramMemoryVolume=" + ramMemoryVolume +
                 ", ramClockSpeed=" + ramClockSpeed +
-                "} " + super.toString();
+                "} ";
     }
 }

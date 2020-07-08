@@ -24,8 +24,7 @@ public class RentableCar extends Car implements Rental {
     public boolean isRent() {
         if (person != null) {
             System.out.println("Samochód został wypożyczony");
-        }
-        else {
+        } else {
             System.out.println("Samochód znajduje się w wypożyczalni do dyspozycji");
         }
         return false;
@@ -38,17 +37,4 @@ public class RentableCar extends Car implements Rental {
                 "} " + super.toString();
     }
 
-    @Override
-    public void turnIntoDirection(String direction) {
-        setDirectionMemory(direction);
-        System.out.println(direction);
-
-    }
-
-    @Override
-    public void turnLeft() {
-        String turnLeft = "Skręciłeś w lewo";
-        setDirectionMemory(turnLeft);
-        System.out.println(turnLeft);
-    }
 }

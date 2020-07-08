@@ -35,6 +35,34 @@ abstract class Vehicle implements Movable {
     }
 
     @Override
+    public void turnLeft() {
+        String turnLeft = "Skręciłeś w lewo";
+        setDirectionMemory(turnLeft);
+        System.out.println(turnLeft);
+    }
+
+    @Override
+    public void turnRight() {
+        String turnRight = "Skręciłeś w prawo";
+        setDirectionMemory(turnRight);
+        System.out.println(turnRight);
+    }
+
+    @Override
+    public void goForward() {
+        String goForward = "Pojechałeś prosto";
+        setDirectionMemory(goForward);
+        System.out.println(goForward);
+    }
+
+    @Override
+    public void goBack() {
+        String goBack = "Wróciłeś";
+        setDirectionMemory(goBack);
+        System.out.println(goBack);
+    }
+
+    @Override
     public String toString() {
         return "Vehicle{" +
                 "name='" + name + '\'' +

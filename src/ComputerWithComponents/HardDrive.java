@@ -18,8 +18,8 @@ public class HardDrive extends ComputerPatternInfo {
 
     @Override
     public String toString() {
-        return "HardDrive{" +
+        return "HardDrive{" + super.toString() +
                 "storageCapacityVolume=" + storageCapacityVolume +
-                "} " + super.toString();
+                "} ";
     }
 }
