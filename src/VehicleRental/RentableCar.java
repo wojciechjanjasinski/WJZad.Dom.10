@@ -1,6 +1,6 @@
 package VehicleRental;
 
-public class RentableCar extends Car implements Rental, Movable {
+public class RentableCar extends Car implements Rental {
     Person person;
 
     public RentableCar(String name, int yearProduction, int numberOfSeats) {
@@ -43,5 +43,12 @@ public class RentableCar extends Car implements Rental, Movable {
         setDirectionMemory(direction);
         System.out.println(direction);
 
+    }
+
+    @Override
+    public void turnLeft() {
+        String turnLeft = "Skręciłeś w lewo";
+        setDirectionMemory(turnLeft);
+        System.out.println(turnLeft);
     }
 }

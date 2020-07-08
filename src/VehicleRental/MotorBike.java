@@ -28,4 +28,9 @@ public class MotorBike extends Vehicle {
     public void turnIntoDirection(String direction) {
 
     }
+
+    @Override
+    public void turnLeft() {
+
+    }
 }

@@ -27,4 +27,9 @@ public class Car extends Vehicle {
     public void turnIntoDirection(String direction) {
 
     }
+
+    @Override
+    public void turnLeft() {
+
+    }
 }

@@ -7,4 +7,5 @@ public interface Movable {
     String BACK = "Cofanie";
     void turnIntoDirection(String direction);
 
+    void turnLeft();
     }
