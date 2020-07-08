@@ -1,7 +1,8 @@
 package VehicleRental;
 
-public class RentableCar extends Car implements Rental {
+public class RentableCar extends Car implements Rental, Movable {
     Person person;
+
     public RentableCar(String name, int yearProduction, int numberOfSeats) {
         super(name, yearProduction, numberOfSeats);
         person = new Person();
@@ -9,27 +10,23 @@ public class RentableCar extends Car implements Rental {
 
     @Override
     public void rent(String firstName, String lastName, String id) {
-        person.setFirstName(firstName);
-        person.setLastName(lastName);
-        person.setId(id);
+        person = new Person(firstName, lastName, id);
         System.out.println(firstName + " " + lastName + " " + id);
     }
 
     @Override
     public void handOver() {
-        person.setFirstName(null);
-        person.setLastName(null);
-        person.setId(null);
+        person = null;
         System.out.println("Samochód został zwrócony");
     }
 
     @Override
     public boolean isRent() {
-        if (person.getFirstName() != null) {
+        if (person != null) {
             System.out.println("Samochód został wypożyczony");
         }
         else {
-            System.out.println("Samochód znajduje się  wypożyczalni do dyspozycji");
+            System.out.println("Samochód znajduje się w wypożyczalni do dyspozycji");
         }
         return false;
     }
@@ -39,5 +36,12 @@ public class RentableCar extends Car implements Rental {
         return "RentableCar{" +
                 "person=" + person +
                 "} " + super.toString();
+    }
+
+    @Override
+    public void turnIntoDirection(String direction) {
+        setDirectionMemory(direction);
+        System.out.println(direction);
+
     }
 }

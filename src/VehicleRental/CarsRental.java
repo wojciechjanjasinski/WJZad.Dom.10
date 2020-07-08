@@ -15,5 +15,7 @@ public class CarsRental {
         rentableCars[0].isRent();
         rentableCars[1].isRent();
 
+        rentableCars[0].turnIntoDirection(Movable.BACK);
+
     }
 }

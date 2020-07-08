@@ -23,8 +23,9 @@ public class MotorBike extends Vehicle {
                 "} " + super.toString();
     }
 
+
     @Override
-    public void turnIntoDirection() {
+    public void turnIntoDirection(String direction) {
 
     }
 }
