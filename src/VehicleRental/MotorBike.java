@@ -23,9 +23,4 @@ public class MotorBike extends Vehicle {
                 "} " + super.toString();
     }
 
-
-    @Override
-    public void turnLeft() {
-
-    }
 }

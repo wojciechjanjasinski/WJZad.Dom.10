@@ -23,8 +23,4 @@ public class Car extends Vehicle {
                 "} " + super.toString();
     }
 
-    @Override
-    public void turnLeft() {
-
-    }
 }
